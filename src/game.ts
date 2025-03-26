@@ -21,7 +21,7 @@ const azureCredentials = {
 };
 
 const azureLanguageCredentials = {
-  endpoint: "https://language-lab4.cognitiveservices.azure.com/language/:analyze-conversations?api-version=2024-11-15-preview",
+  endpoint: "https://language-lab4.cognitiveservices.azure.com/language/analyze-conversations?api-version=2024-11-15-preview",
   key: NLU_KEY,
   deploymentName: "game",
   projectName: "GuessingGame",
