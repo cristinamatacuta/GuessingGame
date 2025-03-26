@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trivaso Game</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- ✅ Add Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <!-- 🌟 Splash Page -->
+    <div id="splash" class="page active">
+      <div id="layout" class="splash-layout center">
+        <div id="left-side" class="left">
+          <h1 class="main-title">TRIVASO</h1>
+          <p class="subtitle">Your fun way to learn more</p>
+        </div>
+
+        <div id="right-side" class="right hidden">
+          <div class="bubble-wrapper">
+            <div class="bubble bubble-left"></div>
+            <div id="start-button" class="bubble bubble-main">Start</div>
+            <div class="bubble bubble-right"></div>
+          </div>
+          <p class="hint">Press to start the game</p>
+        </div>
+      </div>
+    </div>
+
+    <!--Page 2 -->
+    <div id="page2" class="page">
+      <div class="page2-wrapper">
+        <!-- Title & Subtitle -->
+        <div class="left-frame">
+          <h1 class="main-title">TRIVASO</h1>
+          <p class="subtitle">Your fun way to learn more</p>
+        </div>
+
+        <!-- Settings Block -->
+        <div class="main-text-container">
+          <div>
+            <p class="instruction sparkle">Choose your settings</p>
+
+          </div>
+          <div class="right-frame">
+           <!-- Difficulty Section -->
+<div class="difficulty-section">
+  <p class="label">Difficulty</p>
+  <div class="options">
+    <span class="option" data-type="difficulty" data-value="easy">Easy</span>
+    <span class="option" data-type="difficulty" data-value="medium">Medium</span>
+    <span class="option" data-type="difficulty" data-value="hard">Hard</span>
+  </div>
+</div>
+
+<!-- Category Section -->
+
+
+<div class="category-section">
+  <p class="label">Category</p>
+  <div class="options">
+    <span class="option" data-type="category" data-value="countries">Countries</span>
+    <span class="option" data-type="category" data-value="languages">Languages</span>
+    
+  </div>
+</div>
+          </div>
+        </div>
+
+        <!-- Listening Bubbles -->
+        <div class="bubble-wrapper listening">
+          <div class="bubble bubble-left"></div>
+          <div class="bubble bubble-main"><i class="fa fa-microphone"></i></div>
+          <div class="bubble bubble-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌟 Page 3 -->
+    <div id="page3" class="page">
+      <div class="game-info">
+        <p>Score: <span id="score">0</span></p>
+        <p>Category: <span id="category">N/A</span> </p>
+        <p>Difficulty: <span id="difficulty">N/A</span> </p>
+      </div>
+
+      <div class="page3-wrapper">
+        <div class="game-clue">
+          <h2 class="clue-number">Clue  <span id="clue-number">1</span></h2>
+          <p id="clue-text">The clue will appear here...</p>
+
+          <!-- Transcript -->
+          <p id="transcript" class="transcript-text">
+            <span id="transcript-content" ></span><span class="cursor">|</span>
+          </p>
+
+          <div class="bubble-wrapper listening">
+            <div class="bubble bubble-left"></div>
+            <div class="bubble bubble-main"><i class="fa fa-microphone"></i></div>
+            <div class="bubble bubble-right"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🌟 Page 4 -->
+<div id="page4" class="page page4">
+  <div class="game-info">
+    <p>Score: <span id="score">0</span><span id="score-bonus" class="score-bonus"></span></p>
+    <p>Category: <span id="category">N/A</span> </p>
+    <p>Difficulty: <span id="difficulty">N/A</span> </p>
+  </div>
+
+  <div class="page4-wrapper">
+    <div class="game-clue">
+      <h2 class="clue-number">Clue <span id="clue-number">1</span></h2>
+      <p id="clue-text">The clue will appear here...</p>
+
+      <!-- Add the correct answer here -->
+      <div id="correct-answer" class="hidden"></div>
+
+      <p id="transcript" class="transcript-text">
+        <span id="transcript-content" ></span><span class="cursor">|</span>
+      </p>
+
+      <div class="bubble-wrapper listening">
+        <div class="bubble bubble-left"></div>
+        <div class="bubble bubble-main">Correct!</div>
+        <div class="bubble bubble-right"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- 🌟 Page 5: Game Over -->
+<div id="page5" class="page">
+  <div class="splash-layout split game-over-layout">
+
+    <div class="left-side">
+      <h2 class="final-score-text">Final Score</h2>
+      <p class="final-score-number"><span id="final-score">0</span></p>
+    </div>
+
+    <div class="right-side">
+      <div class="bubble-wrapper">
+        <div class="bubble bubble-left"></div>
+        <div id="restart-button" class="bubble bubble-main">Start</div>
+        <div class="bubble bubble-right"></div>
+      </div>
+      <p class="hint">Click to play again!</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- App JS -->
+    <script type="module" src="/src/splash.ts"></script>
+  </body>
+</html>
