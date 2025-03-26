@@ -7,8 +7,6 @@ import { isValidCategory, isValidDifficulty, extractEntity} from "./helpers.ts";
 ;
 
 
-
-
 interface NLUValue {
   entities: any;
   topIntent: string;
@@ -404,7 +402,7 @@ PlayClue: {
           on: { SPEAK_COMPLETE: "GetConfirmation" }, 
         },
         GetConfirmation: {
-          entry: "spst.listen", 
+          entry: "spst.listen", // Listen for user input
           on: {
             RECOGNISED: {
               actions: [

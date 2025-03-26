@@ -33,3 +33,5 @@ dist-ssr
 
 src/azure.ts
 .vercel
+/src/config.json
+
