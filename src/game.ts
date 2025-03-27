@@ -163,12 +163,14 @@ const dmMachine = setup({
           {
             target: ".GetCategory",
             guard: ({ context }) =>
-              !isValidCategory(context.category?.toLowerCase() ?? null), 
+              !isValidCategory(context.category?.toLowerCase() ?? null) &&
+              isValidDifficulty(context.difficulty?.toLowerCase() ?? null), 
           },
           {
             target: ".GetDifficulty",
             guard: ({ context }) =>
-              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), 
+              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null) &&
+              isValidCategory(context.category?.toLowerCase() ?? null),  
           },
           {
             target: ".NoInput",
