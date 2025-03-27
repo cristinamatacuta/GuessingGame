@@ -1,10 +1,10 @@
 /* ==== BASE STYLES & IMPORTS ==== */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap");
 
 body {
   background: #000;
   margin: 0;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
   color: white;
   width: 100vw;
   height: 100%;
@@ -15,7 +15,12 @@ p {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -54,7 +59,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  transition: transform 1s ease, text-align 1s ease;
+  transition:
+    transform 1s ease,
+    text-align 1s ease;
 }
 
 .splash-layout.split .left {
@@ -80,7 +87,9 @@ h1, h2, h3, h4, h5, h6 {
 .right {
   opacity: 0;
   transform: translateX(100%);
-  transition: opacity 1s ease, transform 1s ease;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
   text-align: center;
 }
 
@@ -102,7 +111,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   border-radius: 1000px;
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   backdrop-filter: blur(2px);
   transition: transform 0.3s ease;
 }
@@ -134,8 +143,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hint {
-  color: var(--Text-Light, #FFF);
-  font-family: 'Cairo', sans-serif;
+  color: var(--Text-Light, #fff);
+  font-family: "Cairo", sans-serif;
   font-size: 25px;
   font-style: normal;
   font-weight: 700;
@@ -195,7 +204,7 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1;
   min-width: 250px;
   align-items: start;
-  gap:-10px
+  gap: -10px;
 }
 
 .section-title {
@@ -227,14 +236,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .option.selected {
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .left-frame {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
@@ -249,7 +258,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .right-frame {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
@@ -304,7 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #page3 .game-info span {
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -340,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
   font-style: italic;
   font-size: 25px;
   text-align: center;
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -368,7 +377,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .page4 .bubble {
-  background-color: #1e8449; 
+  background-color: #1e8449;
   background-image: linear-gradient(147deg, #1e8449 0%, #333333 74%);
 }
 
@@ -378,7 +387,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .game-info span {
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%) !important;
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
@@ -392,11 +401,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   margin-top: 10px;
   text-align: center;
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: 'Cairo', sans-serif;
+  font-family: "Cairo", sans-serif;
 }
 
 .hidden {
@@ -437,14 +446,14 @@ h1, h2, h3, h4, h5, h6 {
 .final-score-number {
   font-size: 35px;
   font-weight: 900;
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .page5 .bubble-main {
-  background: linear-gradient(90deg, #7F00FF 0%, #A47DAB 100%);
+  background: linear-gradient(90deg, #7f00ff 0%, #a47dab 100%);
   color: white;
   font-size: 1.5rem;
   padding: 1rem 2rem;
@@ -461,7 +470,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ==== ANIMATIONS ==== */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -469,9 +479,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.bubble-main.pulsing { 
+.bubble-main.pulsing {
   animation: pulse 1.2s ease-in-out infinite !important;
-  font-family: 'Cairo', sans-serif !important; 
+  font-family: "Cairo", sans-serif !important;
 }
 
 @keyframes colorWave {
@@ -487,41 +497,63 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bubble-main.speaking {
-  background: linear-gradient(270deg, #7F00FF, #A47DAB, #7F00FF) !important;
+  background: linear-gradient(270deg, #7f00ff, #a47dab, #7f00ff) !important;
   background-size: 200% 200% !important;
   animation: colorWave 3s linear infinite !important;
-  font-family: 'Cairo', sans-serif !important; 
+  font-family: "Cairo", sans-serif !important;
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes sparkle {
-  0% { opacity: 0.2; transform: scale(1); }
-  100% { opacity: 1; transform: scale(1.2); }
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
 
-
 .bubble-main.analyzing {
-  animation: 
-    pulse 0.8s ease-in-out infinite alternate, 
+  animation:
+    pulse 0.8s ease-in-out infinite alternate,
     colorWave 4s linear infinite;
-  background: linear-gradient(270deg, #7F00FF, #A47DAB, #7F00FF);
+  background: linear-gradient(270deg, #7f00ff, #a47dab, #7f00ff);
   background-size: 200% 200%;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  100% { transform: scale(1.05); opacity: 1; }
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
 
-
 @keyframes colorWave {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .instruction.sparkle::after {
@@ -530,32 +562,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Page Transitions */
-#page3, #page4 { 
-  transition: opacity 0.3s ease !important; 
-  font-family: 'Cairo', sans-serif !important; 
-} 
+#page3,
+#page4 {
+  transition: opacity 0.3s ease !important;
+  font-family: "Cairo", sans-serif !important;
+}
 
 /* Score Bonus Animation */
-.score-bonus { 
-  color: #4CAF50 !important; 
-  font-weight: bold !important; 
-  animation: fadeInOut 1.5s ease-in-out !important; 
-  font-family: 'Cairo', sans-serif !important; 
-} 
+.score-bonus {
+  color: #4caf50 !important;
+  font-weight: bold !important;
+  animation: fadeInOut 1.5s ease-in-out !important;
+  font-family: "Cairo", sans-serif !important;
+}
 
 /*  Keyframes for Score Bonus */
-@keyframes fadeInOut { 
-  0% { opacity: 0; } 
-  50% { opacity: 1; }  
-  100% { opacity: 0; } 
-} 
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* ==== BUBBLE STATES ==== */
 .page4 .bubble-main:not(.speaking):not(.pulsing),
 .bubble-main.correct-state {
   background: linear-gradient(147deg, #1e8449 0%, #333333 74%) !important;
   animation: none !important;
   border-color: rgba(255, 255, 255, 0.6) !important;
-  font-family: 'Cairo', sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
 
 .page4.incorrect .bubble-main:not(.speaking):not(.pulsing),
@@ -563,10 +602,8 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(147deg, #b71c1c 0%, #4e0303 74%) !important;
   animation: none !important;
   border-color: rgba(255, 255, 255, 0.6) !important;
-  font-family: 'Cairo', sans-serif !important;
+  font-family: "Cairo", sans-serif !important;
 }
-
-
 
 /* ==== PAGE CONTAINERS ==== */
 .page {
@@ -639,7 +676,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
   }
 
-  .splash-layout.split .left{
+  .splash-layout.split .left {
     transform: translateX(0);
   }
 }
