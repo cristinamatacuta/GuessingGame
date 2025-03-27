@@ -1,510 +1,507 @@
 {
-    "categories": {
-      "countries": [
-        {
-          "name": "Buthan",
-          "difficulty": "hard",
-          "clues": [
-            "The national sport is archery.",
-            "There are no trafic lights.",
-            "The country is located in the northen hemisphere.",
-            "Average summer temperature 24 degrees.",
-            "The country is located in Asia.",
-            "There are three main colours in their flag.",
-            "It has a population of 784,486 people.",
-            "It is the 4th smallest country in Asia.",
-            "There is a Thunder Dragon on the flag.",
-            "There is orange on the flag."
-          ]
-        },
-        {
-          "name": "Croatia",
-          "difficulty": "medium",
-          "clues": [
-            "This country has more sunny hours than Sydney.",
-            "It has a population of 3.899 million.",
-            "National animal - Pine Marten.",
-            "It has 1.246 islands.",
-            "This country change currency quite recently.",
-            "Three main flag colours.",
-            "The country is located in Europe.",
-            "It is the 30th country in Europe by landmass.",
-            "Kings Landing was filmed there.",
-            "The capital is Zagreb."
-          ]
-        },
-        {
-          "name": "Peru",
-          "difficulty": "medium",
-          "clues": [
-            "It has a population of 34 millions.",
-            "Potatoes originated in this country.",
-            "Two main flag colours.",
-            "The national animal is Vicuña.",
-            "The country is located in South America.",
-            "The Amazon River begins here.",
-            "Over 70% of the Alpacas in the whole world live in this country.",
-            "4th biggest country in South America.",
-            "Home to one of the seven wonders of the world.",
-            "The capital city is Lima."
-          ]
-        },
-        {
-          "name": "Nigeria",
-          "difficulty": "hard",
-          "clues": [
-            "The country is home to over 525 languages.",
-            "This country has the third highest movie industry in the whole world.",
-            "The population is 218.5 million.",
-            "The official language is English.",
-            "The national animal is the black crowned crane.",
-            "This country is in Africa.",
-            "The currency is called naira.",
-            "One of the borders of this country is Chad.",
-            "The capital city is Abuja.",
-            "The flag has green and white."
-          ]
-        },{
-          "name": "Kazakhstan",
-          "difficulty": "hard",
-          "clues": [
-            "This country's national drink is horse milk.",
-            "It has 120 ethnic groups.",
-            "This country's flag consists of two colours.",
-            "The currency is called tenge.",
-            "This country's population is 19.62 million.",
-            "This country is in Asia.",
-            "Largest landlocked country.",
-            "Apples originated in this country.",
-            "The capital city is Astana.",
-            "Largest Space Launch Facility."
-          ]
-        },
-        {
-          "name": "Thailand",
-          "difficulty": "medium",
-          "clues": [
-            "It has 2815 kilometer of coastline.",
-            "It has the longest city name in the entire world.",
-            "Population is 71.7 milion.",
-            "The flag has three colours.",
-            "This country has 1403 islands.",
-            "This country is in Asia.",
-            "This country's main religion is Buddhism.",
-            "This country had the previous name of Siam.",
-            "The only Southeast Asian country that wasn’t colonised by the Europeans.",
-            "The capital is Bangkok."
-          ]
-        },
-        {
-          "name": "Zimbabwe",
-          "difficulty": "hard",
-          "clues": [
-            "They have no national currency.",
-            "They gained independence as a country in 1980.",
-            "This country's population is roughly 16 million.",
-            "It has the world's largest man made lake.",
-            "It has eight different currencies in circulation.",
-            "This country is in Africa.",
-            "This country is completely landlock.",
-            "This country is 26th out of 58 in population size in Africa.",
-            "Harare is the capital city.",
-            "Home to the Victoria Falls.."
-          ]
-        }, 
-        {
-          "name": "Romania",
-          "difficulty": "medium",
-          "clues": [
-            "It is one of the countries with the fastest internet speed.",
-            "It has the world's second largest Administrative Building.",
-            "It is located in Europe.",
-            "It has Europe's first electrified castle.",
-            "It also has Europe's largest Rock Sculpture.",
-            "It has the first city which had electric street lamps in Europe.",
-            "It's capital is also called Little Paris.",
-            "It has the heaviest building in the world.",
-            "It is known worldwide due to Dracula.",
-            "The capital is Bucharest."
-          ]
-        }, 
-        {
-          "name": "Egypt",
-          "difficulty": "medium",
-          "clues": [
-            "It is the third-highest populated country in Africa.",
-            "However, it is not entirely in Africa. This country is transcontinental.",
-            "It borders two seas.",
-            "The oldest peace treaty was signed in this country",
-            "It is the driest place on earth.",
-            "Around 95% of the country's land is covered by the Sahara Desert.",
-            "This country is home to the last remaining wonder of the ancient world.",
-            "It is a populary holiday destination.",
-            "It's official language is Arabic.",
-            "The capital is Cairo."
-          ]
-        }, 
-        {
-          "name": "Iceland",
-          "difficulty": "medium",
-          "clues": [
-            "Has no mosquitoes naturally occurring on the island",
-            "Uses geothermal energy to heat 90% of its homes",
-            "Has the oldest parliament in the world (established 930 AD)",
-            "The national sport is glíma (a form of wrestling)",
-            "Located just below the Arctic Circle",
-            "Has more sheep than people",
-            "Home to the largest glacier in Europe",
-            "The language has remained largely unchanged since Viking times",
-            "Capital city is Reykjavik",
-            "Uses the króna as currency"
-          ]
-        },
-        {
-          "name": "Singapore",
-          "difficulty": "easy",
-          "clues": [
-            "Chewing gum is banned except for medical use",
-            "Has four official languages",
-            "One of only three city-states in the world",
-            "The national flower is the orchid",
-            "Located just one degree north of the equator",
-            "Has the world's first night zoo",
-            "Currency is the Singapore dollar",
-            "Known as the 'Lion City' though no lions ever lived there",
-            "Has a merlion (half lion, half fish) as its symbol",
-            "One of the world's busiest ports"
-          ]
-        },
-        {
-          "name": "Madagascar",
-          "difficulty": "hard",
-          "clues": [
-            "90% of its wildlife is found nowhere else on Earth",
-            "Was once part of the supercontinent Gondwana",
-            "The national sport is called moraingy (a form of martial arts)",
-            "Home to lemurs, fossas, and tomato frogs",
-            "Fourth largest island in the world",
-            "Official languages are Malagasy and French",
-            "Vanilla is one of its main exports",
-            "Currency is the ariary",
-            "Capital city is Antananarivo",
-            "Has baobab trees that are over 1,000 years old"
-          ]
-        },
-        {
-          "name": "New Zealand",
-          "difficulty": "medium",
-          "clues": [
-            "Has more species of flightless birds than any other country",
-            "Was the last major landmass to be settled by humans",
-            "National symbol is the kiwi bird",
-            "Filming location for the Lord of the Rings movies",
-            "Has two national anthems (English and Māori)",
-            "Wellington is the southernmost capital city in the world",
-            "First country to give women the right to vote",
-            "Home to the world's smallest dolphin species",
-            "Currency is the New Zealand dollar",
-            "Has no native land mammals except bats"
-          ]
-        },
-        {
-          "name": "Mongolia",
-          "difficulty": "hard",
-          "clues": [
-            "Has the lowest population density of any country",
-            "Traditional homes are called gers (yurts)",
-            "Was the center of the largest contiguous empire in history",
-            "National sport is wrestling, horse racing, and archery",
-            "Home to the two-humped Bactrian camel",
-            "Capital city is Ulaanbaatar (the coldest capital in the world)",
-            "Currency is the tögrög",
-            "Has more horses than people",
-            "Traditional drink is fermented mare's milk (airag)",
-            "Landlocked between Russia and China"
-          ]
-        },
-        
-        {
-          "name": "Finland",
-          "difficulty": "medium",
-          "clues": [
-            "Has the most heavy metal bands per capita",
-            "Invented the sauna (has about 2 million saunas for 5.5M people)",
-            "Home of the Moomins (popular cartoon characters)",
-            "National sport is pesäpallo (Finnish baseball)",
-            "Has the world's happiest population (according to UN reports)",
-            "Currency is the euro",
-            "Capital city is Helsinki",
-            "Has over 180,000 islands in its archipelago",
-            "Official languages are Finnish and Swedish",
-            "Home of Santa Claus (Rovaniemi)"
-          ]
-        },
-        {
-          "name": "Paraguay",
-          "difficulty": "Hard",
-          "clues": [
-            "This country's national animal is the Pampas Fox.",
-            "This country is bilingual.",
-            "In this country one would find armadillos, tapers and ocelots.",
-            "The currency is called guarani.",
-            "It has a population of roughly 6.5 million.",
-            "This is the 4th smallest country in its continent.",
-            "This country is completely landlock.",
-            "It is located in South America.",
-            "Capital city is Asuncion.",
-            "The flag has three main colours."
-          ]
-        }
-        
+  "categories": {
+    "countries": [
+      {
+        "name": "Buthan",
+        "difficulty": "hard",
+        "clues": [
+          "The national sport is archery.",
+          "There are no trafic lights.",
+          "The country is located in the northen hemisphere.",
+          "Average summer temperature 24 degrees.",
+          "The country is located in Asia.",
+          "There are three main colours in their flag.",
+          "It has a population of 784,486 people.",
+          "It is the 4th smallest country in Asia.",
+          "There is a Thunder Dragon on the flag.",
+          "There is orange on the flag."
+        ]
+      },
+      {
+        "name": "Croatia",
+        "difficulty": "medium",
+        "clues": [
+          "This country has more sunny hours than Sydney.",
+          "It has a population of 3.899 million.",
+          "National animal - Pine Marten.",
+          "It has 1.246 islands.",
+          "This country change currency quite recently.",
+          "Three main flag colours.",
+          "The country is located in Europe.",
+          "It is the 30th country in Europe by landmass.",
+          "Kings Landing was filmed there.",
+          "The capital is Zagreb."
+        ]
+      },
+      {
+        "name": "Peru",
+        "difficulty": "medium",
+        "clues": [
+          "It has a population of 34 millions.",
+          "Potatoes originated in this country.",
+          "Two main flag colours.",
+          "The national animal is Vicuña.",
+          "The country is located in South America.",
+          "The Amazon River begins here.",
+          "Over 70% of the Alpacas in the whole world live in this country.",
+          "4th biggest country in South America.",
+          "Home to one of the seven wonders of the world.",
+          "The capital city is Lima."
+        ]
+      },
+      {
+        "name": "Nigeria",
+        "difficulty": "hard",
+        "clues": [
+          "The country is home to over 525 languages.",
+          "This country has the third highest movie industry in the whole world.",
+          "The population is 218.5 million.",
+          "The official language is English.",
+          "The national animal is the black crowned crane.",
+          "This country is in Africa.",
+          "The currency is called naira.",
+          "One of the borders of this country is Chad.",
+          "The capital city is Abuja.",
+          "The flag has green and white."
+        ]
+      },
+      {
+        "name": "Kazakhstan",
+        "difficulty": "hard",
+        "clues": [
+          "This country's national drink is horse milk.",
+          "It has 120 ethnic groups.",
+          "This country's flag consists of two colours.",
+          "The currency is called tenge.",
+          "This country's population is 19.62 million.",
+          "This country is in Asia.",
+          "Largest landlocked country.",
+          "Apples originated in this country.",
+          "The capital city is Astana.",
+          "Largest Space Launch Facility."
+        ]
+      },
+      {
+        "name": "Thailand",
+        "difficulty": "medium",
+        "clues": [
+          "It has 2815 kilometer of coastline.",
+          "It has the longest city name in the entire world.",
+          "Population is 71.7 milion.",
+          "The flag has three colours.",
+          "This country has 1403 islands.",
+          "This country is in Asia.",
+          "This country's main religion is Buddhism.",
+          "This country had the previous name of Siam.",
+          "The only Southeast Asian country that wasn’t colonised by the Europeans.",
+          "The capital is Bangkok."
+        ]
+      },
+      {
+        "name": "Zimbabwe",
+        "difficulty": "hard",
+        "clues": [
+          "They have no national currency.",
+          "They gained independence as a country in 1980.",
+          "This country's population is roughly 16 million.",
+          "It has the world's largest man made lake.",
+          "It has eight different currencies in circulation.",
+          "This country is in Africa.",
+          "This country is completely landlock.",
+          "This country is 26th out of 58 in population size in Africa.",
+          "Harare is the capital city.",
+          "Home to the Victoria Falls.."
+        ]
+      },
+      {
+        "name": "Romania",
+        "difficulty": "medium",
+        "clues": [
+          "It is one of the countries with the fastest internet speed.",
+          "It has the world's second largest Administrative Building.",
+          "It is located in Europe.",
+          "It has Europe's first electrified castle.",
+          "It also has Europe's largest Rock Sculpture.",
+          "It has the first city which had electric street lamps in Europe.",
+          "It's capital is also called Little Paris.",
+          "It has the heaviest building in the world.",
+          "It is known worldwide due to Dracula.",
+          "The capital is Bucharest."
+        ]
+      },
+      {
+        "name": "Egypt",
+        "difficulty": "medium",
+        "clues": [
+          "It is the third-highest populated country in Africa.",
+          "However, it is not entirely in Africa. This country is transcontinental.",
+          "It borders two seas.",
+          "The oldest peace treaty was signed in this country",
+          "It is the driest place on earth.",
+          "Around 95% of the country's land is covered by the Sahara Desert.",
+          "This country is home to the last remaining wonder of the ancient world.",
+          "It is a populary holiday destination.",
+          "It's official language is Arabic.",
+          "The capital is Cairo."
+        ]
+      },
+      {
+        "name": "Iceland",
+        "difficulty": "medium",
+        "clues": [
+          "Has no mosquitoes naturally occurring on the island",
+          "Uses geothermal energy to heat 90% of its homes",
+          "Has the oldest parliament in the world (established 930 AD)",
+          "The national sport is glíma (a form of wrestling)",
+          "Located just below the Arctic Circle",
+          "Has more sheep than people",
+          "Home to the largest glacier in Europe",
+          "The language has remained largely unchanged since Viking times",
+          "Capital city is Reykjavik",
+          "Uses the króna as currency"
+        ]
+      },
+      {
+        "name": "Singapore",
+        "difficulty": "easy",
+        "clues": [
+          "Chewing gum is banned except for medical use",
+          "Has four official languages",
+          "One of only three city-states in the world",
+          "The national flower is the orchid",
+          "Located just one degree north of the equator",
+          "Has the world's first night zoo",
+          "Currency is the Singapore dollar",
+          "Known as the 'Lion City' though no lions ever lived there",
+          "Has a merlion (half lion, half fish) as its symbol",
+          "One of the world's busiest ports"
+        ]
+      },
+      {
+        "name": "Madagascar",
+        "difficulty": "hard",
+        "clues": [
+          "90% of its wildlife is found nowhere else on Earth",
+          "Was once part of the supercontinent Gondwana",
+          "The national sport is called moraingy (a form of martial arts)",
+          "Home to lemurs, fossas, and tomato frogs",
+          "Fourth largest island in the world",
+          "Official languages are Malagasy and French",
+          "Vanilla is one of its main exports",
+          "Currency is the ariary",
+          "Capital city is Antananarivo",
+          "Has baobab trees that are over 1,000 years old"
+        ]
+      },
+      {
+        "name": "New Zealand",
+        "difficulty": "medium",
+        "clues": [
+          "Has more species of flightless birds than any other country",
+          "Was the last major landmass to be settled by humans",
+          "National symbol is the kiwi bird",
+          "Filming location for the Lord of the Rings movies",
+          "Has two national anthems (English and Māori)",
+          "Wellington is the southernmost capital city in the world",
+          "First country to give women the right to vote",
+          "Home to the world's smallest dolphin species",
+          "Currency is the New Zealand dollar",
+          "Has no native land mammals except bats"
+        ]
+      },
+      {
+        "name": "Mongolia",
+        "difficulty": "hard",
+        "clues": [
+          "Has the lowest population density of any country",
+          "Traditional homes are called gers (yurts)",
+          "Was the center of the largest contiguous empire in history",
+          "National sport is wrestling, horse racing, and archery",
+          "Home to the two-humped Bactrian camel",
+          "Capital city is Ulaanbaatar (the coldest capital in the world)",
+          "Currency is the tögrög",
+          "Has more horses than people",
+          "Traditional drink is fermented mare's milk (airag)",
+          "Landlocked between Russia and China"
+        ]
+      },
 
-      ],
-      "languages": [
-        {
-          "name": "Russian",
-          "difficulty": "easy",
-          "clues": [
-            "This language is fusional.",
-            "It has a system of palatalisation, giving the language a phonetic uniqueness.",
-            "It is notorious for its consontant clusters.",
-            "This language is spoken in Europe and Asia.",
-            "It is  the official language in 4 countries.",
-            "This language has three genders:feminine, masculin, and neutral.",
-            "It is the eighth most-spoken language in the world.",
-            "Belongs to the slavic language family.",
-            "It is written using the Cyrillic script.",
-            "It is  the eighth most-spoken language in the world."
-          ]
-        },
-        {
-          "name": "Portuguese",
-          "difficulty": "easy",
-          "clues": [
-            "This language has a future subjunctive mood.",
-            "It uses a digraph to represent palatal nasal sounds.",
-            "It has a large vowel inventory due to its consistent distiction between nasal and non-nasal vowels.",
-            "This language has both stress-time and syllable-time variaties.",
-            "Spoken mostly outside of its country of origin.",
-            "Fifth-most spoken native language.",
-            "It was the traiding language in Asia.",
-            "Official language in 9 countries.",
-            "Spoken on 4 continents.",
-            "A romance language."
-          ]
-        },
-        {
-          "name": "Arabic",
-          "difficulty": "easy",
-          "clues": [
-            "This language might sound foreign to English speakers due to its uvular and pharyngeal consonants.",
-            "It uses triconsonantal roots to form vocabulary.",
-            "It is written from left-to-right and no vowels are marked in the texts.",
-            "Numbers are written from left to right.",
-            "This language is part of the semitic language family.",
-            "There are no capital letters in this language.",
-            "It only contains three vowel sounds.",
-            "There is no to be verb in the present tense.",
-            "This language forms a dialectial continuum, meaning that it has several variaties that differ in mutual intelligibility.",
-            "It is the official language of 22 countries."
-           
-          ]
-        },
-        {
-          "name": "Tagalog",
-          "difficulty": "medium",
-          "clues": [
-            "Uses verb-subject-object word order in basic sentences",
-            "Has a complex system of verb affixes showing focus/trigger",
-            "Significant portion of vocabulary comes from Spanish",
-            "Uses reduplication to indicate grammatical aspects",
-            "Official language of the Philippines along with English",
-            "Writing system switched from Baybayin script to Latin alphabet under Spanish rule",
-            "The word 'boondocks' comes from this language (bundok = mountain)",
-            "Has borrowed words from Malay, Sanskrit, Arabic, and English",
-            "Distinguishes between inclusive and exclusive 'we'",
-            "About 28% of the vocabulary is Spanish-derived"
-          ]
-        },
-        {
-          "name": "Welsh",
-          "difficulty": "hard",
-          "clues": [
-            "Uses initial consonant mutations that change word beginnings grammatically",
-            "Has a vigesimal number system (based on 20) for numbers 40-100",
-            "The longest place name in Europe is in this language: Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
-            "Verbs conjugate according to person, number, tense, and mood",
-            "Official language in Wales alongside English",
-            "Uses digraphs like 'll', 'dd', and 'ff' as single letters",
-            "About 20% of the population in Wales speaks it fluently",
-            "The word 'bard' comes from this language's tradition",
-            "Has a poetic form called 'cynghanedd' with complex sound patterns",
-            "Revitalization efforts have doubled the number of speakers since 1980"
-          ]
-        },
+      {
+        "name": "Finland",
+        "difficulty": "medium",
+        "clues": [
+          "Has the most heavy metal bands per capita",
+          "Invented the sauna (has about 2 million saunas for 5.5M people)",
+          "Home of the Moomins (popular cartoon characters)",
+          "National sport is pesäpallo (Finnish baseball)",
+          "Has the world's happiest population (according to UN reports)",
+          "Currency is the euro",
+          "Capital city is Helsinki",
+          "Has over 180,000 islands in its archipelago",
+          "Official languages are Finnish and Swedish",
+          "Home of Santa Claus (Rovaniemi)"
+        ]
+      },
+      {
+        "name": "Paraguay",
+        "difficulty": "Hard",
+        "clues": [
+          "This country's national animal is the Pampas Fox.",
+          "This country is bilingual.",
+          "In this country one would find armadillos, tapers and ocelots.",
+          "The currency is called guarani.",
+          "It has a population of roughly 6.5 million.",
+          "This is the 4th smallest country in its continent.",
+          "This country is completely landlock.",
+          "It is located in South America.",
+          "Capital city is Asuncion.",
+          "The flag has three main colours."
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "name": "Russian",
+        "difficulty": "easy",
+        "clues": [
+          "This language is fusional.",
+          "It has a system of palatalisation, giving the language a phonetic uniqueness.",
+          "It is notorious for its consontant clusters.",
+          "This language is spoken in Europe and Asia.",
+          "It is  the official language in 4 countries.",
+          "This language has three genders:feminine, masculin, and neutral.",
+          "It is the eighth most-spoken language in the world.",
+          "Belongs to the slavic language family.",
+          "It is written using the Cyrillic script.",
+          "It is  the eighth most-spoken language in the world."
+        ]
+      },
+      {
+        "name": "Portuguese",
+        "difficulty": "easy",
+        "clues": [
+          "This language has a future subjunctive mood.",
+          "It uses a digraph to represent palatal nasal sounds.",
+          "It has a large vowel inventory due to its consistent distiction between nasal and non-nasal vowels.",
+          "This language has both stress-time and syllable-time variaties.",
+          "Spoken mostly outside of its country of origin.",
+          "Fifth-most spoken native language.",
+          "It was the traiding language in Asia.",
+          "Official language in 9 countries.",
+          "Spoken on 4 continents.",
+          "A romance language."
+        ]
+      },
+      {
+        "name": "Arabic",
+        "difficulty": "easy",
+        "clues": [
+          "This language might sound foreign to English speakers due to its uvular and pharyngeal consonants.",
+          "It uses triconsonantal roots to form vocabulary.",
+          "It is written from left-to-right and no vowels are marked in the texts.",
+          "Numbers are written from left to right.",
+          "This language is part of the semitic language family.",
+          "There are no capital letters in this language.",
+          "It only contains three vowel sounds.",
+          "There is no to be verb in the present tense.",
+          "This language forms a dialectial continuum, meaning that it has several variaties that differ in mutual intelligibility.",
+          "It is the official language of 22 countries."
+        ]
+      },
+      {
+        "name": "Tagalog",
+        "difficulty": "medium",
+        "clues": [
+          "Uses verb-subject-object word order in basic sentences",
+          "Has a complex system of verb affixes showing focus/trigger",
+          "Significant portion of vocabulary comes from Spanish",
+          "Uses reduplication to indicate grammatical aspects",
+          "Official language of the Philippines along with English",
+          "Writing system switched from Baybayin script to Latin alphabet under Spanish rule",
+          "The word 'boondocks' comes from this language (bundok = mountain)",
+          "Has borrowed words from Malay, Sanskrit, Arabic, and English",
+          "Distinguishes between inclusive and exclusive 'we'",
+          "About 28% of the vocabulary is Spanish-derived"
+        ]
+      },
+      {
+        "name": "Welsh",
+        "difficulty": "hard",
+        "clues": [
+          "Uses initial consonant mutations that change word beginnings grammatically",
+          "Has a vigesimal number system (based on 20) for numbers 40-100",
+          "The longest place name in Europe is in this language: Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch",
+          "Verbs conjugate according to person, number, tense, and mood",
+          "Official language in Wales alongside English",
+          "Uses digraphs like 'll', 'dd', and 'ff' as single letters",
+          "About 20% of the population in Wales speaks it fluently",
+          "The word 'bard' comes from this language's tradition",
+          "Has a poetic form called 'cynghanedd' with complex sound patterns",
+          "Revitalization efforts have doubled the number of speakers since 1980"
+        ]
+      },
 
-        {
-          "name": "Finnish",
-          "difficulty": "hard",
-          "clues": [
-            "Has 15 grammatical cases including unusual ones like the instructive and comitative",
-            "Words can be extremely long due to agglutination.",
-            "No grammatical gender or articles",
-            "Uses vowel harmony like Turkish and Hungarian",
-            "Not related to neighboring  languages.",
-            "The longest palindrome in this language.",
-            "Stress always falls on the first syllable",
-            "Has separate words for 'you' singular  and plural ",
-            "Official language of Finland and recognized minority language in Sweden",
-            "The word 'sauna' comes from this language"
-          ]
-        },  {
-          "name": "Basque",
-          "difficulty": "hard",
-          "clues": [
-            "Traders speaking this language had a history of traiding with speakers of Icelandic.",
-            "It has an uncommon linguistic feature called ergativity.",
-            "Spoken by 900,000 people.",
-            "This language is an language isolate.",
-            "The only close relative would be Aquitanian, a language that is already dead but was found in archaeological sites in France.",
-            "Did Not Have a Standard Orthography Until the 1960.",
-            "It is the oldest language in Europe.",
-            "It does not distinguish between genders and uses no accents.",
-            "The number system is vigesimal, meaning that is based on 20 rather than 10.",
-            "Official language in Spain.",
-            "Official language in France as well."
-            
-          ]
-        },
-        {
-          "name": "Guarani",
-          "difficulty": "medium",
-          "clues": [
-            "This language uses circumfix for negation.",
-            "It prenasalizes its consonants before nasal vowels, resulting in two forms of many consontans.",
-            "It has nasal harmony.",
-            "This language has been historically very resitant to colonial european language shift.",
-            "One of the three oficial languages of Mercosur.",
-            "It belongs to the Tupian language family.",
-            "The first written grammar was written by a Jesuit priest.",
-            "It is one of the most widely spoken Native American languages.",
-            "Oficial language of Paraguay.",
-            "About 5 million people speak it."
-          ]
-        },
-        {
-          "name": "Swahili",
-          "difficulty": "medium",
-          "clues": [
-            "Bantu language with heavy Arabic influence in vocabulary",
-            "Uses a noun class system with 18 grammatical genders",
-            "The word 'safari' comes from this language (originally meaning 'journey')",
-            "Official language of Tanzania and Kenya",
-            "About 35% of vocabulary comes from Arabic",
-            "Uses prefixes rather than suffixes for grammatical markers",
-            "Simplified version used as lingua franca across East Africa",
-            "Writing system switched from Arabic script to Latin under colonial rule",
-            "Has no grammatical tense (uses aspects instead)",
-            "The Lion King movie contains many words from this language"
-          ]
-        },
-        {
-          "name": "Inuktitut",
-          "difficulty": "hard",
-          "clues": [
-            "Uses a polysynthetic structure creating extremely long words",
-            "Official writing system uses a unique syllabic script",
-            "Has dozens of words for different types of snow and ice",
-            "Verbs are conjugated for both subject and object",
-            "Official language in Nunavut, Canada",
-            "Word order is usually subject-object-verb",
-            "Uses quadruple verbs (verbs made of four parts)",
-            "The word 'igloo' comes from this language",
-            "Has dual number (singular/dual/plural) like Ancient Greek",
-            "Endangered language with about 35,000 speakers"
-          ]
-        },
-        {
-          "name": "Tamil",
-          "difficulty": "hard",
-          "clues": [
-            "One of the longest surviving classical languages (over 2000 years)",
-            "Has a unique script with rounded characters",
-            "Distinguishes between inclusive and exclusive 'we'",
-            "Classical literature includes the Sangam poems (300 BCE–300 CE)",
-            "Official language in India, Sri Lanka, and Singapore",
-            "Uses honorifics that change verb endings based on social status",
-            "Has retroflex consonants uncommon in European languages",
-            "The only Indian language that's also an official language outside Asia (in Singapore)",
-            "Recognized as a classical language by the Indian government",
-            "Has separate grammatical forms for rational and irrational nouns"
-          ]
-        },
-        {
-          "name": "Quechua",
-          "difficulty": "medium",
-          "clues": [
-            "Was the lingua franca of the Inca Empire",
-            "Uses evidential markers showing how the speaker knows information",
-            "Official language in Peru, Bolivia, and Ecuador",
-            "Has three vowel sounds (a, i, u)",
-            "Uses suffixes rather than prefixes for grammatical markers",
-            "The word 'llama' comes from this language",
-            "Still spoken by about 8 million people in South America",
-            "Uses a decimal counting system (unlike Mayan vigesimal)",
-            "Spanish borrowed words like 'puma', 'condor', and 'quinine' from it",
-            "Has no grammatical gender"
-          ]
-        },
-        {
-          "name": "Icelandic",
-          "difficulty": "hard",
-          "clues": [
-            "Has changed so little that modern speakers can read 12th-century sagas",
-            "Retains four grammatical cases from Old Norse",
-            "Uses letters like ð (eth) and þ (thorn) no longer used in English",
-            "Creates new compound words rather than borrowing foreign terms",
-            "The word 'geyser' comes from this language",
-            "Has a tradition of naming committees that approve new words",
-            "Verbs conjugate for person, number, tense, voice, and mood",
-            "Official language of Iceland with about 330,000 speakers",
-            "Uses a purist language policy avoiding loanwords",
-            "The alphabet has 32 letters including special characters"
-          ]
-        },
-        {
-          "name": "Hungarian",
-          "difficulty": "hard",
-          "clues": [
-            "Has 18 grammatical cases",
-            "Not related to any neighboring languages",
-            "Part of the Uralic language family with Finnish and Estonian",
-            "Words can be extremely long due to agglutination",
-            "Has no grammatical gender",
-            "Stress is always on the first syllable",
-            "Uses vowel harmony like Turkish",
-            "Has two words for 'red' (vörös and piros)",
-            "Official language of Hungary and recognized minority language in several countries",
-            "The longest word contains 44 letters"
-          ]
-        },
-        {
-          "name": "Nahuatl",
-          "difficulty": "medium",
-          "clues": [
-            "This language is known for its agglutination.",
-            "It is spoken by over 1.5 million people.",
-            "This language is where the following words originate from:chocolate, avocado, tomato.",
-            "It is part of the Uto-Aztecan language family.",
-            "Spoken throughout southern and central Mexico.",
-            "About 200,000 people are monolingual, they do not speak Spanish or another language.",
-            "It has 30 variants curretly spoken.",
-            "The name of the language is pronounced differently based on the variant.",
-            "The Aztecs and the Toltecs spoke an early form of Nahuatl..",
-            "The words Mexico, Guatemala, and Nicaragua all come from this language."
-          ]
-        }
-
-      ]
-    }
+      {
+        "name": "Finnish",
+        "difficulty": "hard",
+        "clues": [
+          "Has 15 grammatical cases including unusual ones like the instructive and comitative",
+          "Words can be extremely long due to agglutination.",
+          "No grammatical gender or articles",
+          "Uses vowel harmony like Turkish and Hungarian",
+          "Not related to neighboring  languages.",
+          "The longest palindrome in this language.",
+          "Stress always falls on the first syllable",
+          "Has separate words for 'you' singular  and plural ",
+          "Official language of Finland and recognized minority language in Sweden",
+          "The word 'sauna' comes from this language"
+        ]
+      },
+      {
+        "name": "Basque",
+        "difficulty": "hard",
+        "clues": [
+          "Traders speaking this language had a history of traiding with speakers of Icelandic.",
+          "It has an uncommon linguistic feature called ergativity.",
+          "Spoken by 900,000 people.",
+          "This language is an language isolate.",
+          "The only close relative would be Aquitanian, a language that is already dead but was found in archaeological sites in France.",
+          "Did Not Have a Standard Orthography Until the 1960.",
+          "It is the oldest language in Europe.",
+          "It does not distinguish between genders and uses no accents.",
+          "The number system is vigesimal, meaning that is based on 20 rather than 10.",
+          "Official language in Spain.",
+          "Official language in France as well."
+        ]
+      },
+      {
+        "name": "Guarani",
+        "difficulty": "medium",
+        "clues": [
+          "This language uses circumfix for negation.",
+          "It prenasalizes its consonants before nasal vowels, resulting in two forms of many consontans.",
+          "It has nasal harmony.",
+          "This language has been historically very resitant to colonial european language shift.",
+          "One of the three oficial languages of Mercosur.",
+          "It belongs to the Tupian language family.",
+          "The first written grammar was written by a Jesuit priest.",
+          "It is one of the most widely spoken Native American languages.",
+          "Oficial language of Paraguay.",
+          "About 5 million people speak it."
+        ]
+      },
+      {
+        "name": "Swahili",
+        "difficulty": "medium",
+        "clues": [
+          "Bantu language with heavy Arabic influence in vocabulary",
+          "Uses a noun class system with 18 grammatical genders",
+          "The word 'safari' comes from this language (originally meaning 'journey')",
+          "Official language of Tanzania and Kenya",
+          "About 35% of vocabulary comes from Arabic",
+          "Uses prefixes rather than suffixes for grammatical markers",
+          "Simplified version used as lingua franca across East Africa",
+          "Writing system switched from Arabic script to Latin under colonial rule",
+          "Has no grammatical tense (uses aspects instead)",
+          "The Lion King movie contains many words from this language"
+        ]
+      },
+      {
+        "name": "Inuktitut",
+        "difficulty": "hard",
+        "clues": [
+          "Uses a polysynthetic structure creating extremely long words",
+          "Official writing system uses a unique syllabic script",
+          "Has dozens of words for different types of snow and ice",
+          "Verbs are conjugated for both subject and object",
+          "Official language in Nunavut, Canada",
+          "Word order is usually subject-object-verb",
+          "Uses quadruple verbs (verbs made of four parts)",
+          "The word 'igloo' comes from this language",
+          "Has dual number (singular/dual/plural) like Ancient Greek",
+          "Endangered language with about 35,000 speakers"
+        ]
+      },
+      {
+        "name": "Tamil",
+        "difficulty": "hard",
+        "clues": [
+          "One of the longest surviving classical languages (over 2000 years)",
+          "Has a unique script with rounded characters",
+          "Distinguishes between inclusive and exclusive 'we'",
+          "Classical literature includes the Sangam poems (300 BCE–300 CE)",
+          "Official language in India, Sri Lanka, and Singapore",
+          "Uses honorifics that change verb endings based on social status",
+          "Has retroflex consonants uncommon in European languages",
+          "The only Indian language that's also an official language outside Asia (in Singapore)",
+          "Recognized as a classical language by the Indian government",
+          "Has separate grammatical forms for rational and irrational nouns"
+        ]
+      },
+      {
+        "name": "Quechua",
+        "difficulty": "medium",
+        "clues": [
+          "Was the lingua franca of the Inca Empire",
+          "Uses evidential markers showing how the speaker knows information",
+          "Official language in Peru, Bolivia, and Ecuador",
+          "Has three vowel sounds (a, i, u)",
+          "Uses suffixes rather than prefixes for grammatical markers",
+          "The word 'llama' comes from this language",
+          "Still spoken by about 8 million people in South America",
+          "Uses a decimal counting system (unlike Mayan vigesimal)",
+          "Spanish borrowed words like 'puma', 'condor', and 'quinine' from it",
+          "Has no grammatical gender"
+        ]
+      },
+      {
+        "name": "Icelandic",
+        "difficulty": "hard",
+        "clues": [
+          "Has changed so little that modern speakers can read 12th-century sagas",
+          "Retains four grammatical cases from Old Norse",
+          "Uses letters like ð (eth) and þ (thorn) no longer used in English",
+          "Creates new compound words rather than borrowing foreign terms",
+          "The word 'geyser' comes from this language",
+          "Has a tradition of naming committees that approve new words",
+          "Verbs conjugate for person, number, tense, voice, and mood",
+          "Official language of Iceland with about 330,000 speakers",
+          "Uses a purist language policy avoiding loanwords",
+          "The alphabet has 32 letters including special characters"
+        ]
+      },
+      {
+        "name": "Hungarian",
+        "difficulty": "hard",
+        "clues": [
+          "Has 18 grammatical cases",
+          "Not related to any neighboring languages",
+          "Part of the Uralic language family with Finnish and Estonian",
+          "Words can be extremely long due to agglutination",
+          "Has no grammatical gender",
+          "Stress is always on the first syllable",
+          "Uses vowel harmony like Turkish",
+          "Has two words for 'red' (vörös and piros)",
+          "Official language of Hungary and recognized minority language in several countries",
+          "The longest word contains 44 letters"
+        ]
+      },
+      {
+        "name": "Nahuatl",
+        "difficulty": "medium",
+        "clues": [
+          "This language is known for its agglutination.",
+          "It is spoken by over 1.5 million people.",
+          "This language is where the following words originate from:chocolate, avocado, tomato.",
+          "It is part of the Uto-Aztecan language family.",
+          "Spoken throughout southern and central Mexico.",
+          "About 200,000 people are monolingual, they do not speak Spanish or another language.",
+          "It has 30 variants curretly spoken.",
+          "The name of the language is pronounced differently based on the variant.",
+          "The Aztecs and the Toltecs spoke an early form of Nahuatl..",
+          "The words Mexico, Guatemala, and Nicaragua all come from this language."
+        ]
+      }
+    ]
   }
+}
