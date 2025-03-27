@@ -8,6 +8,9 @@ import {
   isValidDifficulty,
   extractEntity,
 } from "./helpers.ts";
+import data from "./game.json";
+
+
 const inspector = createBrowserInspector();
 
 const azureCredentials = {
@@ -34,7 +37,7 @@ const settings: Settings = {
   ttsDefaultVoice: "en-GB-SoniaNeural",
 };
 
-import data from "./game.json";
+
 
 interface Item {
   name: string;
@@ -61,25 +64,31 @@ const dmMachine = setup({
       }),
     "spst.listen": ({ context }) =>
       context.spstRef.send({ type: "LISTEN", value: { nlu: true } }),
+    //Shortcuts for actions
+
+    // Reset all relevant context properties
     resetGame: assign({
       currentItem: null,
       currentClueIndex: 0,
       clues: [],
       answer: null,
     }),
+    // Assign points to the player
     assignPoints: assign({
-      previousScore: ({ context }) => context.score, // 💾 Save current score
+      previousScore: ({ context }) => context.score, 
       score: ({ context }) =>
         context.score + Math.max(10 - context.currentClueIndex, 1),
     }),
-
+    // Set intent to null
     resetIntent: assign({
-      intent: null, // Reset intent to null
+      intent: null, 
     }),
-
+ 
+    // Increment the clue index
     incrementClueIndex: assign({
       currentClueIndex: ({ context }) => context.currentClueIndex + 1,
     }),
+    // Save user input
     saveTranscript: assign({
       transcript: (_, event: DMEvents) =>
         "nluValue" in event && event.nluValue?.text ? event.nluValue.text : "",
@@ -125,7 +134,7 @@ const dmMachine = setup({
           answer: null,
           transcript: "",
         }),
-        // Speak the welcome message
+
         {
           type: "spst.speak",
           params: {
@@ -136,8 +145,11 @@ const dmMachine = setup({
       ],
       on: { SPEAK_COMPLETE: "GetGameSettings" },
     },
-
+    
+    // State that listens for the user to select a category and difficulty
+    // Child and granchild states that listen and retrive category and difficulty if not recognized or selected initially
     GetGameSettings: {
+      // Reset to null when entering this state
       entry: assign({ intent: null, category: null, difficulty: null }),
       initial: "Listening",
       on: {
@@ -145,24 +157,24 @@ const dmMachine = setup({
           {
             target: "#DM.StartGame",
             guard: ({ context }) =>
-              isValidCategory(context.category?.toLowerCase() ?? null) && // Convert to lowercase
-              isValidDifficulty(context.difficulty?.toLowerCase() ?? null), // Convert to lowercase
+              isValidCategory(context.category?.toLowerCase() ?? null) && // Convert to lowercase so it matched the category
+              isValidDifficulty(context.difficulty?.toLowerCase() ?? null), // Convert to lowercase so it matches thd difficulty
           },
           {
             target: ".GetCategory",
             guard: ({ context }) =>
-              !isValidCategory(context.category?.toLowerCase() ?? null), // Convert to lowercase
+              !isValidCategory(context.category?.toLowerCase() ?? null), 
           },
           {
             target: ".GetDifficulty",
             guard: ({ context }) =>
-              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), // Convert to lowercase
+              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), 
           },
           {
             target: ".NoInput",
             guard: ({ context }) =>
-              !isValidCategory(context.category?.toLowerCase() ?? null) && // Convert to lowercase
-              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), // Convert to lowercase
+              !isValidCategory(context.category?.toLowerCase() ?? null) && 
+              !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), 
           },
           {
             target: "#DM.GameOver",
@@ -171,6 +183,7 @@ const dmMachine = setup({
         ],
       },
       states: {
+        // State that listens to the user input and extract category, intent, and difficulty
         Listening: {
           entry: "spst.listen",
           on: {
@@ -200,6 +213,7 @@ const dmMachine = setup({
             },
           },
         },
+        // Helping state that speaks when no input is detected
         NoInput: {
           entry: {
             type: "spst.speak",
@@ -210,6 +224,7 @@ const dmMachine = setup({
           },
           on: { SPEAK_COMPLETE: "Listening" },
         },
+        // Child state that listens for the category if difficulty exists
         GetCategory: {
           initial: "AskForCategory",
           states: {
@@ -220,6 +235,9 @@ const dmMachine = setup({
               },
               on: { SPEAK_COMPLETE: "GetCat" },
             },
+            // State that retrives the category
+            // Contains fallback in case the intent does not match the right intent
+            // Tries to extract from raw text 
             GetCat: {
               entry: "spst.listen",
               on: {
@@ -232,7 +250,7 @@ const dmMachine = setup({
                         "category",
                       )?.toLowerCase() ?? null;
 
-                    // Fallback: If no entity, try matching the raw text directly
+                    // Fallback: if no entity, try matching the raw text directly
                     const fallbackCategory =
                       category || (isValidCategory(rawText) ? rawText : null);
                     const fallbackIntent = fallbackCategory
@@ -253,6 +271,7 @@ const dmMachine = setup({
             },
           },
         },
+        // Child state that listens for the difficulty if category exists
         GetDifficulty: {
           initial: "AskForDifficulty",
           states: {
@@ -263,6 +282,9 @@ const dmMachine = setup({
               },
               on: { SPEAK_COMPLETE: "GetDif" },
             },
+            // State that retrives the difficulty
+            // Contains fallback in case the intent does not match the right intent
+            // Tries to extract from raw text
             GetDif: {
               entry: "spst.listen",
               on: {
@@ -298,7 +320,11 @@ const dmMachine = setup({
         },
       },
     },
-
+    // Brain of the game, it initially resets properties for when the user decides to play two rounds in a row
+    // It filters the json file and extracts only the items from the selected category and difficulty
+    // It then selects a random item from the filtered items
+    // It makes sure the same item is not selected twice in a row
+    // It then sets the current item, clues, and current clue index
     StartGame: {
       entry: [
         "resetGame",
@@ -325,7 +351,9 @@ const dmMachine = setup({
       ],
       always: "#DM.PlayClue",
     },
-
+    
+    // Clue state, it first says the clue, and then listens for the user's answer
+    // IMPORTANT!! Due to NLU issues, the program might encounter issues when trying to extract the user's answer is answer is only one word
     PlayClue: {
       initial: "SayClue",
       states: {
@@ -338,6 +366,8 @@ const dmMachine = setup({
           },
           on: { SPEAK_COMPLETE: "GetAnswer" },
         },
+        // State that gets the answer
+        // It overrides the intent if the user's answer is only one word as a fallback, however, it is not 100% reliable
         GetAnswer: {
           entry: "spst.listen",
           on: {
@@ -360,6 +390,8 @@ const dmMachine = setup({
           },
         },
       },
+      // Depending on the answer, the program will either go to the correct answer state, the incorrect answer state, or the game over state
+      // Or play the next Clue, by staing in the same state, and increesing the index
       on: {
         LISTEN_COMPLETE: [
           {
@@ -433,7 +465,7 @@ const dmMachine = setup({
           on: { SPEAK_COMPLETE: "GetConfirmation" },
         },
         GetConfirmation: {
-          entry: "spst.listen", // Listen for user input
+          entry: "spst.listen", 
           on: {
             RECOGNISED: {
               actions: [
@@ -507,10 +539,11 @@ const dmMachine = setup({
         ],
       },
       states: {
-        DelayBeforeNextClue: {
+        DelayBeforeNextClue: { // Delay state for UI purposes
           after: {
             3000: [
-              {
+              // Depeding on the number of clues left, the program will either ask for the next clue or handle the last clue
+              {  
                 target: "HandleLastClue",
                 guard: ({ context }) =>
                   context.currentClueIndex >= context.clues.length - 1,
@@ -521,6 +554,7 @@ const dmMachine = setup({
             ],
           },
         },
+        // State reached if the number of clues left is zero and no answer was given or the answer was incorrect
         HandleLastClue: {
           entry: {
             type: "spst.speak",
@@ -532,6 +566,7 @@ const dmMachine = setup({
           },
           on: { SPEAK_COMPLETE: "GetAnswer" },
         },
+        // If answer is incorrect and there are still clues left, the program will ask if the user wants to continue with the next clue
         AskNextClue: {
           entry: {
             type: "spst.speak",
