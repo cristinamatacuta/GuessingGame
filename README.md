@@ -2,6 +2,8 @@
 
 Trivaso is an interactive voice-controlled trivia game where players answer questions from different categories and difficulty levels. The game provides clues, listens for responses, and reacts dynamically based on the user’s answers.  
 
+> **Important:** Minimal errors might occur if your answer is given as a *single word* due to NLU (Natural Language Understanding) limitations.
+
 ## 🚀 Features  
 - 🎤 **Voice-controlled gameplay** - Speak your answers instead of typing.  
 - 🌍 **Two categories:** *Languages* and *Countries*.  
@@ -65,10 +67,15 @@ Trivaso is an interactive voice-controlled trivia game where players answer ques
 ## 📂 Project Structure  
 
 ```
-/src
-├── game3.ts       # The main state machine managing game logic
-├── helpers.ts     # Utility functions used in the game logic
-├── splash.ts      # Handles the splash screen animations and interactions
-├── types.ts       # Defines TypeScript types used in the project
-├── style.css      # The main styling file for the UI
-└── index.html     # The game’s main HTML structure
+
+Code
+├── index.html         # The game’s main HTML structure
+└── src
+    ├── game.ts       # The main state machine managing game logic
+    ├── helpers.ts     # Utility functions used in the game logic
+    ├── splash.ts      # Handles the splash screen animations and interactions
+    ├── types.ts       # Defines TypeScript types used in the project
+    └── style.css      # The main styling file for the UI
+
+
+
