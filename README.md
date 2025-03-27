@@ -71,7 +71,7 @@ Trivaso is an interactive voice-controlled trivia game where players answer ques
 Code
 ├── index.html         # The game’s main HTML structure
 └── src
-    ├── game3.ts       # The main state machine managing game logic
+    ├── game.ts       # The main state machine managing game logic
     ├── helpers.ts     # Utility functions used in the game logic
     ├── splash.ts      # Handles the splash screen animations and interactions
     ├── types.ts       # Defines TypeScript types used in the project
