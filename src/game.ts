@@ -3,7 +3,7 @@ import { Settings, speechstate } from "speechstate";
 import { createBrowserInspector } from "@statelyai/inspect";
 import { KEY, NLU_KEY } from "./azure.ts";
 import { DMContext, DMEvents } from "./types.ts";
-import { isValidCategory, isValidDifficulty, extractEntity} from "./helpers.ts";
+import { isValidCategory, isValidDifficulty, extractEntity } from "./helpers.ts";
 ;
 
 
@@ -34,7 +34,7 @@ const settings: Settings = {
   asrDefaultCompleteTimeout: 0,
   asrDefaultNoInputTimeout: 5000,
   locale: "en-GB",
-  ttsDefaultVoice: "en-GB-SoniaNeural", 
+  ttsDefaultVoice: "en-GB-SoniaNeural",
 };
 
 import data from './game.json';
@@ -71,9 +71,9 @@ const dmMachine = setup({
       answer: null,
     }),
     "assignPoints": assign({
-  previousScore: ({ context }) => context.score, // 💾 Save current score
-  score: ({ context }) => context.score + Math.max(10 - context.currentClueIndex, 1),
-}),
+      previousScore: ({ context }) => context.score, // 💾 Save current score
+      score: ({ context }) => context.score + Math.max(10 - context.currentClueIndex, 1),
+    }),
 
     "resetIntent": assign({
       intent: null, // Reset intent to null
@@ -86,11 +86,11 @@ const dmMachine = setup({
     "incrementClueIndex": assign({
       currentClueIndex: ({ context }) => context.currentClueIndex + 1,
     }),
-      "saveTranscript": assign({
-        transcript: (_, event: DMEvents) => ('nluValue' in event && event.nluValue?.text ? event.nluValue.text : "")
-      }),
-    
-    
+    "saveTranscript": assign({
+      transcript: (_, event: DMEvents) => ('nluValue' in event && event.nluValue?.text ? event.nluValue.text : "")
+    }),
+
+
   },
 }).createMachine({
   id: "DM",
@@ -120,9 +120,9 @@ const dmMachine = setup({
     Greeting: {
       entry: [
         // Reset all relevant context properties
-        assign({ 
-          category: null, 
-          difficulty: null, 
+        assign({
+          category: null,
+          difficulty: null,
           intent: null,
           score: 0,
           previousScore: 0,
@@ -141,7 +141,7 @@ const dmMachine = setup({
       on: { SPEAK_COMPLETE: "GetGameSettings" },
     },
 
-   
+
     GetGameSettings: {
       entry: assign({ intent: null, category: null, difficulty: null }),
       initial: "Listening",
@@ -169,7 +169,7 @@ const dmMachine = setup({
           {
             target: ".NoInput",
             guard: ({ context }) =>
-              context.intent === null || context.intent==="guessedAnswer" || context.intent==="confirm"&&
+              context.intent === null || context.intent === "guessedAnswer" || context.intent === "confirm" &&
               !isValidCategory(context.category?.toLowerCase() ?? null) && // Convert to lowercase
               !isValidDifficulty(context.difficulty?.toLowerCase() ?? null), // Convert to lowercase
           },
@@ -185,12 +185,12 @@ const dmMachine = setup({
           on: {
             RECOGNISED: {
               actions: [
-                
+
                 assign(({ event }) => {
                   return {
                     intent: event.nluValue?.topIntent,
                     category: extractEntity(event.nluValue?.entities, "category")?.toLowerCase(), // Convert to lowercase
-                    difficulty:extractEntity(event.nluValue?.entities, "difficulty")?.toLowerCase(),
+                    difficulty: extractEntity(event.nluValue?.entities, "difficulty")?.toLowerCase(),
                   };
                 }),
               ],
@@ -223,17 +223,17 @@ const dmMachine = setup({
                 RECOGNISED: {
                   actions: assign(({ event }) => {
                     const category = extractEntity(event.nluValue?.entities, "category")?.toLowerCase() ?? null;
-                
+
                     return {
                       intent: category ? "selectGameSettings" : event.nluValue?.topIntent,
                       category,
                     };
                   }),
                 },
-                ASR_NOINPUT:{
-                  actions:assign({category:null})
+                ASR_NOINPUT: {
+                  actions: assign({ category: null })
                 },
-                
+
               },
             },
           },
@@ -254,25 +254,25 @@ const dmMachine = setup({
                 RECOGNISED: {
                   actions: assign(({ event }) => {
                     const difficulty = extractEntity(event.nluValue?.entities, "difficulty")?.toLowerCase() ?? null;
-                
+
                     return {
                       intent: difficulty ? "selectGameSettings" : event.nluValue?.topIntent,
                       difficulty,
                     };
                   }),
                 },
-                ASR_NOINPUT:{
-                  actions:assign({difficulty:null})
+                ASR_NOINPUT: {
+                  actions: assign({ difficulty: null })
                 },
-                
-                
+
+
               },
             },
           },
         },
       },
     },
- 
+
 
     StartGame: {
       entry: [
@@ -282,13 +282,13 @@ const dmMachine = setup({
           const filteredItems = selectedCategory.filter(
             (item) => item.difficulty === context.difficulty
           );
-    
+
           // Make sure we dont get the same item twice in a row
           let newItem;
           do {
             newItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
           } while (newItem === context.currentItem && filteredItems.length > 1);
-    
+
           return {
             currentItem: newItem,
             clues: newItem.clues,
@@ -299,68 +299,68 @@ const dmMachine = setup({
       ],
       always: "#DM.PlayClue"
     },
-    
-PlayClue: {
-  initial: "SayClue",
-  states: {
-    SayClue: {
-      entry: {
-        type: "spst.speak",
-        params: ({ context }) => ({
-          utterance: `Here is your clue: ${context.clues[context.currentClueIndex]}`
-        }),
+
+    PlayClue: {
+      initial: "SayClue",
+      states: {
+        SayClue: {
+          entry: {
+            type: "spst.speak",
+            params: ({ context }) => ({
+              utterance: `Here is your clue: ${context.clues[context.currentClueIndex]}`
+            }),
+          },
+          on: { SPEAK_COMPLETE: "GetAnswer" }
+        },
+        GetAnswer: {
+          entry: "spst.listen",
+          on: {
+            RECOGNISED: {
+              actions: assign(({ event }) => {
+                const guess = extractEntity(event.nluValue?.entities, "guess")?.toLowerCase();
+                return {
+                  answer: guess,
+                  intent: guess ? "guessedAnswer" : event.nluValue?.topIntent,
+                  transcript: event.value?.[0]?.utterance ?? ""
+                };
+              })
+            },
+            ASR_NOINPUT: {
+              actions: assign({ answer: null })
+            },
+          }
+        }
       },
-      on: { SPEAK_COMPLETE: "GetAnswer" }
-    },
-    GetAnswer: {
-      entry: "spst.listen",
       on: {
-        RECOGNISED: {
-          actions: assign(({ event }) => {
-            const guess = extractEntity(event.nluValue?.entities, "guess")?.toLowerCase();
-            return {
-              answer: guess,
-              intent: guess ? "guessedAnswer" : event.nluValue?.topIntent,
-              transcript: event.value?.[0]?.utterance ?? ""
-            };
-          })
-        },
-        ASR_NOINPUT: {
-          actions: assign({ answer: null })
-        },
-      }
-    }
-  },
-  on: {
-    LISTEN_COMPLETE: [
-      {
-        target: "#DM.CorrectAnswer",
-        guard: ({ context }) =>
-          context.answer?.toLowerCase() === context.currentItem?.name.toLowerCase() &&
-          context.intent === "guessedAnswer",
+        LISTEN_COMPLETE: [
+          {
+            target: "#DM.CorrectAnswer",
+            guard: ({ context }) =>
+              context.answer?.toLowerCase() === context.currentItem?.name.toLowerCase() &&
+              context.intent === "guessedAnswer",
+          },
+          {
+            target: "#DM.IncorrectAnswer",
+            guard: ({ context }) =>
+              (context.intent === "guessedAnswer" &&
+                context.answer?.toLowerCase() !== context.currentItem?.name.toLowerCase()) ||
+              (context.currentClueIndex >= context.clues.length - 1 &&
+                (context.answer === null || context.intent === "nextClue")),
+          },
+          {
+            target: "#DM.GameOver",
+            guard: ({ context }) => context.intent === "cancel",
+          },
+          {
+            target: "#DM.PlayClue",
+            guard: ({ context }) =>
+              (context.intent === "nextClue" || context.answer === null) &&
+              context.currentClueIndex < context.clues.length - 1,
+            actions: ["incrementClueIndex"],
+          },
+        ],
       },
-      {
-        target: "#DM.IncorrectAnswer",
-        guard: ({ context }) =>
-          (context.intent === "guessedAnswer" &&
-          context.answer?.toLowerCase() !== context.currentItem?.name.toLowerCase()) ||
-          (context.currentClueIndex >= context.clues.length - 1 && 
-           (context.answer === null || context.intent === "nextClue")),
-      },
-      {
-        target: "#DM.GameOver",
-        guard: ({ context }) => context.intent === "cancel",
-      },
-      {
-        target: "#DM.PlayClue",
-        guard: ({ context }) => 
-          (context.intent === "nextClue" || context.answer === null) &&
-          context.currentClueIndex < context.clues.length - 1,
-        actions: ["incrementClueIndex"],
-      },
-    ],
-  },
-},
+    },
     CorrectAnswer: {
       entry: assign({ intent: null }), // Reset intent when entering this state
       initial: "DelayBeforeSpeak", // Create a delay state before speaking
@@ -377,18 +377,18 @@ PlayClue: {
             target: "#DM.GameOver",
             guard: ({ context }) => context.intent === "cancel" || context.intent === null
           },
-          
+
         ],
       },
       states: {
         DelayBeforeSpeak: {
           after: {
-            5000: "AskToRestart", 
+            3000: "AskToRestart",
           },
         },
         AskToRestart: {
           entry: [
-            { type: "assignPoints" }, 
+            { type: "assignPoints" },
             {
               type: "spst.speak",
               params: ({ context }) => ({
@@ -399,7 +399,7 @@ PlayClue: {
               }),
             },
           ],
-          on: { SPEAK_COMPLETE: "GetConfirmation" }, 
+          on: { SPEAK_COMPLETE: "GetConfirmation" },
         },
         GetConfirmation: {
           entry: "spst.listen", // Listen for user input
@@ -408,33 +408,33 @@ PlayClue: {
               actions: [
                 assign(({ context, event }) => {
                   const intent = event.nluValue?.topIntent;
-    
+
                   // If the intent is selectGameSettings, extract and update category/difficulty
                   if (intent === "selectGameSettings") {
                     const newCategory = extractEntity(event.nluValue?.entities, "category")?.toLowerCase();
                     const newDifficulty = extractEntity(event.nluValue?.entities, "difficulty")?.toLowerCase();
-    
+
                     return {
                       intent,
                       category: newCategory || context.category, // Use new category if provided, else keep existing
                       difficulty: newDifficulty || context.difficulty, // Use new difficulty if provided, else keep existing
                     };
                   }
-    
-                  
+
+
                   return { intent };
                 }),
               ],
             },
-            ASR_NOINPUT:{
-              actions:assign({intent:null})
+            ASR_NOINPUT: {
+              actions: assign({ intent: null })
             },
           },
         },
       },
     },
-    
-    
+
+
     IncorrectAnswer: {
       entry: assign({ intent: null }),
       initial: "DelayBeforeNextClue",
@@ -442,14 +442,14 @@ PlayClue: {
         LISTEN_COMPLETE: [
           {
             target: "#DM.PlayClue",
-            guard: ({ context }) => 
-              context.intent === "confirm" && 
+            guard: ({ context }) =>
+              context.intent === "confirm" &&
               context.currentClueIndex < context.clues.length - 1,
             actions: ["incrementClueIndex"],
           },
           {
             target: "#DM.StartGame",
-            guard: ({ context }) => 
+            guard: ({ context }) =>
               context.intent === "restart" ||
               context.intent === "confirm" ||
               context.intent === "selectGameSettings",
@@ -460,12 +460,12 @@ PlayClue: {
           },
           {
             target: ".HandleLastClue",
-            guard: ({ context }) => 
+            guard: ({ context }) =>
               context.currentClueIndex >= context.clues.length - 1,
           },
           {
             target: ".AskNextClue",
-            guard: ({ context }) => 
+            guard: ({ context }) =>
               context.intent === null &&
               context.currentClueIndex < context.clues.length - 1,
           },
@@ -474,10 +474,10 @@ PlayClue: {
       states: {
         DelayBeforeNextClue: {
           after: {
-            5000: [
+            3000: [
               {
                 target: "HandleLastClue",
-                guard: ({ context }) => 
+                guard: ({ context }) =>
                   context.currentClueIndex >= context.clues.length - 1,
               },
               {
@@ -490,7 +490,7 @@ PlayClue: {
           entry: {
             type: "spst.speak",
             params: ({ context }) => ({
-              utterance: context.answer 
+              utterance: context.answer
                 ? `Incorrect! The correct answer was ${context.currentItem?.name}. Would you like to play again? Please state the category and difficulty if different.`
                 : `You've reached the last clue. The correct answer was ${context.currentItem?.name}. Would you like to play again?  Please state the category and difficulty if different.`
             }),
@@ -500,10 +500,10 @@ PlayClue: {
         AskNextClue: {
           entry: {
             type: "spst.speak",
-            params: ({ context }: { context: DMContext }) => ({ 
-              utterance: context.answer 
+            params: ({ context }: { context: DMContext }) => ({
+              utterance: context.answer
                 ? "Incorrect answer. Would you like to continue with the next clue?"
-                : "Inorrect answer. Would you like to continue with the next clue?"
+                : "Incorrect answer. Would you like to continue with the next clue?"
             }),
           },
           on: { SPEAK_COMPLETE: "GetAnswer" },
@@ -514,18 +514,18 @@ PlayClue: {
             RECOGNISED: {
               actions: assign(({ event, context }) => {
                 const intent = event.nluValue?.topIntent;
-                
+
                 if (intent === "selectGameSettings") {
                   const newCategory = extractEntity(event.nluValue?.entities, "category")?.toLowerCase();
                   const newDifficulty = extractEntity(event.nluValue?.entities, "difficulty")?.toLowerCase();
-                  
+
                   return {
                     intent,
                     category: newCategory || context.category,
                     difficulty: newDifficulty || context.difficulty
                   };
                 }
-                
+
                 return { intent };
               }),
             },
@@ -534,7 +534,7 @@ PlayClue: {
             },
           },
         },
-        
+
       },
     },
     GameOver: {
