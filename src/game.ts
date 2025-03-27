@@ -383,7 +383,7 @@ PlayClue: {
       states: {
         DelayBeforeSpeak: {
           after: {
-            7000: "AskToRestart", 
+            5000: "AskToRestart", 
           },
         },
         AskToRestart: {
@@ -474,7 +474,7 @@ PlayClue: {
       states: {
         DelayBeforeNextClue: {
           after: {
-            7000: [
+            5000: [
               {
                 target: "HandleLastClue",
                 guard: ({ context }) => 
