@@ -373,10 +373,16 @@ if (state.matches("GameOver")) {
     }
 });
 
-// Restart button handler (keep existing)
 restartButton.addEventListener("click", () => {
   cachedCategory = null;
   cachedDifficulty = null;
+  
+  // RESET PAGE3 TIMEOUT
+  if (page3Timeout) {
+    clearTimeout(page3Timeout);
+    page3Timeout = null;
+  }
+
   document.querySelectorAll(".option").forEach(el => {
     el.classList.remove("selected");
   });
