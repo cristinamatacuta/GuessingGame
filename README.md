@@ -7,7 +7,7 @@ Trivaso is an interactive voice-controlled trivia game where players answer ques
 ## 🚀 Features  
 - 🎤 **Voice-controlled gameplay** - Speak your answers instead of typing.  
 - 🌍 **Two categories:** *Languages* and *Countries*.  
-- 🎚 **Three difficulty levels:** *Easy, Medium, Hard* (supports synonyms like "Beginner" for Easy and "Extreme" for Hard).  
+- 🎚 **Three difficulty levels:** *Easy, Medium, Hard*.
 - 🏆 **Dynamic scoring system** - Earn **10 points** if you guess from the **first clue**, **9 points** from the second, and so on.  
 - ❌ **Game cancelation** - Exit at any time by saying phrases like *"Cancel the game."*  
 - 🔄 **Replay options** - Continue with the same or different settings.  
