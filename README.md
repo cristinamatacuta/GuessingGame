@@ -1,4 +1,4 @@
-# 🎙️ Trivaso - Voice-Based Trivia Game 🎮  
+if# 🎙️ Trivaso - Voice-Based Trivia Game 🎮  
 
 Trivaso is an interactive voice-controlled trivia game where players answer questions from different categories and difficulty levels. The game provides clues, listens for responses, and reacts dynamically based on the user’s answers.  
 
@@ -51,7 +51,6 @@ Trivaso is an interactive voice-controlled trivia game where players answer ques
 | **Command** | **Effect** |  
 |------------|-----------|  
 | `"Cancel the game"` | Ends the game immediately. |    
-| `"Beginner" / "Extreme"` | Recognized as Easy / Hard difficulty. |  
 | `"Yes, same settings"` | Starts a new round with the same category & difficulty. |  
 | `"No"` | Cancels replay. |  
 
